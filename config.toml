@@ -20,7 +20,7 @@ disqusShortname = "yourdiscussshortname"
     description = "Sharad Roy's personal website"
     keywords = "blog,developer,personal"
     info = "IIT Kanpur"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/prog.jpg"
     footercontent = "Enter a text here."
 
     dateformat = "January 2, 2006"
