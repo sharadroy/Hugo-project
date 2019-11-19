@@ -1,136 +1,92 @@
-baseURL = "https://example.com"
-title   = "Hello Friend NG"
+## Basic Configuration
 
-DefaultContentLanguage = "en"
+baseurl = "https://sharadroy.github.io"
+builddrafts = false
+canonifyurls = false
+languageCode = "en"
 
-theme = "hello-friend-ng"
+author = "Sharad Roy"
+title = "Sharad Roy"
 
-PygmentsCodeFences = true
-PygmentsStyle = "monokai"
+theme = "hugo-goa"
 
-rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
-
-# googleAnalytics = ""
-# disqusShortname = ""
-
-archetypeDir = "archetypes"
-contentDir   = "content"
-dataDir      = "data"
-layoutDir    = "layouts"
-publishDir   = "public"
-
-buildDrafts  = false
-buildFuture  = false
-buildExpored = false
-canonifyURLs = true
-
+## Hugo Built-in Features
+#disqusShortname = "https-shenoybr-github-io-hugo-goa-demo" # Comment out to disable Disqus.
+#googleAnalytics = "XYZ"
 enableRobotsTXT = true
-enableGitInfo   = false
-enableEmoji     = true
-enableMissingTranslationPlaceholders = false
-disableRSS     = false
-disableSitemap = false
-disable404     = false
-disableHugoGeneratorInject = false
 
-[permalinks]
-  posts = "/posts/:year/:month/:title/"
-
-[author]
-  name = "Jane Doe"
-
-[blackfriday]
-  hrefTargetBlank = true
-
-[taxonomies]
-  tag      = "tags"
-  category = "categories"
-
+## Site Settings
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
+author = "Sharad Roy"
+intro = "IIT Kanpur"
+description = "Research Enginner <br/> Samsung Research Institute Bangalore"
+authorimage = "prof1.jpg"
+dateformat = "Jan 2, 2006"
 
-  # Metadata mostly used in document's head
-  description = "Nice theme for homepages and blogs"
-  keywords = ""
-  images = [""]
+## Site Meta Settings
+[params.meta]
+description = "Simple minimalist theme"
+keywords = "minimalist,blog,goa,hugo,developer"
 
-  homeSubtitle = "Hello Friend NG"
+## Social Accounts
+[params.social]
+github = "sharadroy"
+instagram = "sharadnet7"
+#xing = "<username>"
+linkedin = "sharadroy"
+twitter = "rsharad7"
+facebook = "sharadnet7"
+#google = "sharadnet7"
+googlescholar = "ZpgM7GYAAAAJ"
+researchgate = "Sharad_Roy"
+#stackoverflow = "<username>"
+#lastfm = "<username>"
+#goodreads = "<username>"
+#gitlab = "<username>"
+#bitbucket = "<username>"
+#fivehundredpx = "<username>"
+#flickr = "<username>"
+#foursquare = "<username>"
+#hackernews = "<username>"
+#kickstarter = "<username>"
+#patreon = "<username>"
+#pintrest = "<username>"
+steam = "76561198078070268"
+reddit = "Rangomon"
+#snapchat = "<username>"
+youtube = "UCffUKmoP_3bBEZSB6XsBe_A"
+#keybase = "<username>"
+twitch = "rangomon"
+#soundcloud = "<username>"
+#tumblr = "<username>"
+#strava = "<username>"
+#skype = "<username>"
+#telegram = "<username>"
+#whatsapp = "<username>"
+#email = "you@example.com"
 
-  # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  # gitUrl = ""
+## Extras
+[params.extra]
+copyright = "© 2016. Erlich Bachman. [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
+poweredby = true
+highlightjs = true
+socialmarkup = true
+toc = true
+displayrssicon = true
 
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  disableReadOtherPosts = false
-
-  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
-  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
-  customCSS = []
-  customJS  = []
-
-  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
-  justifyContent = false  # Set "text-align: justify" to .content.
-
-  # Directory name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
-
-  # Default theme "light" or "dark"
-  defaultTheme = "dark"
-  themeColor = "#252627"
-
-  # Colors for favicons
-  [params.favicon.color]
-    mask = "#252627"
-    msapplication = "#252627"
-    theme = "#252627"
-
-  [params.logo]
-    logoText     = "$ cd /home/"
-    logoHomeLink = "/"
-    # Set to a valid CSS color to change the cursor in the logo.
-    # logoColor    = "#67a2c9"
-
-  # Social icons
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/"
-
-  [[params.social]]
-    name = "email"
-    url  = "mailto:nobody@example.com"
-
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/"
-
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/"
-
-  [[params.social]]
-    name = "stackoverflow"
-    url  = "https://www.stackoverflow.com/"
-
-[languages]
-  [languages.en]
-    subtitle  = "Hello Friend NG Theme"
-    weight    = 1
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-
-  [languages.fr]
-    subtitle  = "Hello Friend NG Theme"
-    weight    = 2
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-
-[menu]
-  [[menu.main]]
+## Main Menu
+[[menu.main]]
+    name = "publications"
+    weight = 2
+    identifier = "blog"
+    url = "/blog/"
+[[menu.main]]
+    name = "about"
     identifier = "about"
-    name       = "About"
-    url        = "about/"
-  [[menu.main]]
-    identifier = "posts"
-    name       = "Posts"
-    url        = "posts/"
+    weight = 1
+    url = "/about/"
+[[menu.main]]
+    name = "contact"
+    identifier = "coderag"
+    weight = 3
+    url = "/coderag/"
